@@ -1,0 +1,61 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let bf = ["idly", "dosa", "vada", "pongal"];
+        for(let i = 0; i < bf.length; i++){
+            document.write(bf[i]+ ",");
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent {
+            border: 3px solid black;
+            width: 400px;
+            margin: auto;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #child {
+            border: 3px solid blue;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin: auto;
+            margin-bottom: 18px;
+
+        }
+    </style>
+</head>
+<body>
+   <div id = "parent">
+    <div id = "child"> <h6>HI</h6></div>
+    
+    <label > select color :</label>  
+    <input type="color" name = "mycolor" id ="color"> <br>
+    <button type="button" onclick="changecol()">Apply selected background color</button>
+</div>  
+
+<script>
+    function changecol() {
+            colour = document.getElementById("color").value;
+            document.getElementById("child").style.backgroundColor = colour ;
+        }
+</script>
+</body>
+</html>

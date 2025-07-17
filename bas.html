@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="d1"></h1>
+    <h2 id="d2">Chennai</h2>
+    <h3 id="d3">Huge Opportunities Are Hidden Only In Hard Work.</h3>
+
+    <button type="button" onclick="changedata()">change </button> <br>
+    <button type="button" onclick="changecol()">Green </button>
+    <button type="button" onclick="changecolo()">Orange </button>
+    <button type="button" onclick="changeco()"> Sky blue</button>
+    <button type="button" onclick="changec()"> yellow</button>
+    <button type="button" onclick="changecoo()"> black</button>
+
+    <button type="button" onclick="change('lightgreen')" >violet </button>
+
+    <button type="button" onclick="changecolour('pink')"> pink</button>
+
+    <br>
+    <br>
+
+    
+    <img id = "d4" src="./samosa.jpg" alt="Samosa" height="200px" width="300px">
+
+    <br>
+    <br>
+
+    <button type="button" onclick="changeimg()"> Jalebi</button>
+    <button type="button" onclick="changeimag()"> Dosa</button>
+
+    
+
+
+
+    <script>
+        function changeimg() {
+            document.getElementById("d4").innerHTML
+        }
+
+
+        function changedata() {
+            document.getElementById("d2").innerHTML = "Tamil Nadu";
+        }
+        function changecol() {
+            document.getElementById("d2").style.color = "Green";
+        }
+        function changecolo() {
+            document.getElementById("d2").style.color = "orange";
+        }
+        function changeco() {
+            document.getElementById("d2").style.color = "skyblue";
+        }
+        function changec() {
+            document.getElementById("d2").style.color = "yellow";
+        }
+        function changecoo() {
+            document.getElementById("d2").style.color = "black";
+        }
+
+        function changecolour(colour) {
+            document.getElementById("d2").style.color = colour;
+        }
+
+        
+        document.getElementById("d1").innerHTML = "Changepond";
+        document.getElementById("d2").style.color = "blue";
+        let data = document.getElementById("d3").innerHTML;
+        console.log(data);
+    </script>
+</body>
+</html>

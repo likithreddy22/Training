@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <img id = "mainImage" src="./samosa.jpg" alt="Samosa" height="200px" width="300px">
+    <br> 
+    <strong id = "imageCaption">Samosa</strong>
+    <br> 
+<br>
+    
+    <button type="button" onclick="previousImage()">Previous</button>
+    <button type="button" onclick="nextImage()">Next</button>
+
+<script>
+
+const images = [
+{ src: './samosa.jpg', name: 'samosa' },
+{ src: 'idli.webp', name: 'idli' },
+{ src: './vada.jpg', name: 'vada' },
+{ src: './jalebi.jpg', name: 'jalebi' },
+{ src : './dosa.avif', name: 'dosa' }
+];
+
+let currentIndex = 0;
+
+function changeimg(src, name) {
+document.getElementById("mainImage").src = src;
+document.getElementById("imageCaption").innerText = name;
+currentIndex = images.findIndex(image => image.src === src);
+}
+
+function previousImage() {
+currentIndex = (currentIndex - 1 + images.length) % images.length;
+changeimg(images[currentIndex].src, images[currentIndex].name);
+}
+
+function nextImage() {
+currentIndex = (currentIndex + 1) % images.length;
+changeimg(images[currentIndex].src, images[currentIndex].name);
+}
+
+</script>
+
+</body>
+</html>
